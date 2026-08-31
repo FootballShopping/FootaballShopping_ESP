@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootballShopping ESP | Camisetas Oficiales & Retro Collectibles</title>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-dark: #070a12;
+            --bg-card: #121826;
+            --bg-card-hover: #1c2538;
+            --accent-green: #10b981;
+            --accent-green-hover: #059669;
+            --accent-gold: #fbbf24;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #1e293b;
+            --vinted-teal: #00a0a0;
+            --vinted-teal-hover: #007f7f;
+            --price-tag-bg: #ef4444;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .brand-font {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Top Bar Promocional */
+        .top-bar {
+            background: linear-gradient(90deg, #1e1b4b, #0f172a, #064e3b);
+            color: #fff;
+            text-align: center;
+            padding: 10px 15px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .top-bar .highlight {
+            background: var(--price-tag-bg);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        /* Header Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(7, 10, 18, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 1.5rem;
+        }
+
+        .logo {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: var(--text-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span { color: var(--accent-green); }
+        .logo i { color: var(--accent-green); }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover { color: var(--accent-green); }
+
+        .vinted-badge-btn {
+            background-color: var(--vinted-teal);
+            color: #ffffff !important;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 700 !important;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(0, 160, 160, 0.3);
+            text-decoration: none;
+        }
+
+        .vinted-badge-btn:hover {
+            background-color: var(--vinted-teal-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 160, 160, 0.5);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 6rem 1.5rem 5rem;
+            background: radial-gradient(circle at 50% 30%, rgba(16, 185, 129, 0.18) 0%, rgba(7, 10, 18, 1) 75%);
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--accent-green);
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 1.8rem;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #ffffff, #cbd5e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        .hero-price-banner {
+            display: inline-block;
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid var(--accent-gold);
+            padding: 12px 25px;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        .hero-price-banner strong {
+            color: var(--accent-gold);
+            font-size: 1.4rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-green);
+            color: #000;
+            padding: 16px 36px;
+            border-radius: 10px;
+            font-weight: 800;
+            font-size: 1.05rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-green-hover);
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .btn-vinted-hero {
+            background-color: var(--vinted-teal);
+            color: #fff;
+            padding: 16px 36px;
+            border-radius: 10px;
+            font-weight: 800;
+            font-size: 1.05rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 160, 160, 0.4);
+        }
+
+        .btn-vinted-hero:hover {
+            background-color: var(--vinted-teal-hover);
+            transform: translateY(-3px);
+        }
+
+        /* Trust Badges Bar */
+        .trust-bar {
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+            padding: 2.5rem 1.5rem;
+        }
+
+        .trust-container {
+            max-width: 1250px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .trust-item {
+            padding: 1rem;
+        }
+
+        .trust-item i {
+            font-size: 2.2rem;
+            color: var(--accent-green);
+            margin-bottom: 1rem;
+        }
+
+        .trust-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+            color: var(--text-main);
+        }
+
+        .trust-item p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+        }
+
+        /* Catalog Section */
+        .catalog-section {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.6rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 4px;
+            background: var(--accent-green);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-top: 1.2rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2.5rem;
+        }
+
+        /* Product Card */
+        .product-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            overflow: hidden;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(16, 185, 129, 0.5);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .badge-tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(8px);
+            color: var(--accent-gold);
+            border: 1px solid var(--accent-gold);
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 5px 12px;
+            border-radius: 20px;
+            z-index: 10;
+            text-transform: uppercase;
+        }
+
+        .price-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--accent-green);
+            color: #000;
+            font-size: 1.2rem;
+            font-weight: 900;
+            padding: 6px 14px;
+            border-radius: 12px;
+            z-index: 10;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        /* Image Box - Soporta Imagen Real o Placeholder */
+        .product-image-container {
+            height: 300px;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-img {
+            transform: scale(1.08);
+        }
+
+        .placeholder-icon {
+            font-size: 5.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .placeholder-icon {
+            transform: scale(1.15) rotate(4deg);
+        }
+
+        .product-details {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .club-name {
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--accent-green);
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 0.8rem;
+            color: var(--text-main);
+            line-height: 1.3;
+        }
+
+        .product-description {
+            font-size: 0.93rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .specs-grid {
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .spec-item {
+            font-size: 0.82rem;
+        }
+
+        .spec-item .label {
+            color: var(--text-muted);
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .spec-item .val {
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+        .vinted-buy-btn {
+            background-color: var(--vinted-teal);
+            color: #ffffff;
+            text-decoration: none;
+            text-align: center;
+            padding: 14px;
+            border-radius: 10px;
+            font-weight: 800;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 160, 160, 0.25);
+            margin-top: auto;
+        }
+
+        .vinted-buy-btn:hover {
+            background-color: var(--vinted-teal-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(0, 160, 160, 0.45);
+        }
+
+        /* Why Buy From Us Section */
+        .why-us {
+            background-color: var(--bg-card);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 6rem 1.5rem;
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .feature-card {
+            background-color: var(--bg-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 2.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--accent-green);
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-main);
+        }
+
+        .feature-card p {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* How to Buy Steps */
+        .how-it-works {
+            max-width: 1250px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem;
+        }
+
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .step-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .step-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: rgba(16, 185, 129, 0.25);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .step-box h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .step-box p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--bg-card);
+            border-top: 1px solid var(--border-color);
+            padding: 6rem 1.5rem;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 3rem auto 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .faq-item {
+            background-color: var(--bg-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+        }
+
+        .faq-item h3 {
+            font-size: 1.15rem;
+            color: var(--text-main);
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-item h3 i {
+            color: var(--accent-green);
+            font-size: 1rem;
+        }
+
+        .faq-item p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            padding-left: 26px;
+        }
+
+        /* Guarantee Box */
+        .guarantee-box {
+            max-width: 1100px;
+            margin: 5rem auto;
+            background: linear-gradient(135deg, rgba(0, 160, 160, 0.12), rgba(16, 185, 129, 0.12));
+            border: 1px solid rgba(0, 160, 160, 0.4);
+            border-radius: 20px;
+            padding: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .guarantee-icon {
+            font-size: 4rem;
+            color: var(--vinted-teal);
+        }
+
+        .guarantee-text {
+            flex: 1;
+            min-width: 290px;
+        }
+
+        .guarantee-text h3 {
+            font-size: 1.6rem;
+            margin-bottom: 0.6rem;
+            color: var(--text-main);
+        }
+
+        .guarantee-text p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #04060c;
+            border-top: 1px solid var(--border-color);
+            padding: 5rem 1.5rem 2.5rem;
+        }
+
+        .footer-container {
+            max-width: 1250px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .footer-col p {
+            color: var(--text-muted);
+            font-size: 0.93rem;
+            line-height: 1.7;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.93rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-green);
+        }
+
+        .footer-bottom {
+            max-width: 1250px;
+            margin: 0 auto;
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.4rem; }
+            .nav-links { display: none; }
+            .guarantee-box { text-align: center; justify-content: center; padding: 2rem; }
+            .price-badge { font-size: 1rem; padding: 4px 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar Promocional -->
+    <div class="top-bar">
+        <span class="highlight">OFERTA ESPECIAL</span>
+        <span><i class="fa-solid fa-tag"></i> Todas las camisetas en catálogo por solo <strong>25€ / unidad</strong></span>
+        <span>•</span>
+        <span><i class="fa-solid fa-truck-fast"></i> Envíos rápidos y pago 100% protegido con <strong>Vinted</strong></span>
+    </div>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-shirt"></i>
+                FootballShopping <span>ESP</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#ventajas">¿Por qué elegirnos?</a></li>
+                <li><a href="#como-comprar">Proceso de Compra</a></li>
+                <li><a href="#faq">Preguntas Frecuentes</a></li>
+            </ul>
+            <a href="https://www.vinted.es/member/3181094157" target="_blank" class="vinted-badge-btn">
+                <i class="fa-solid fa-store"></i> Perfil Vinted
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-tag">
+                <i class="fa-solid fa-fire"></i> Tienda Especializada de Fútbol
+            </div>
+            <h1>Camisetas de Fútbol Exclusivas al Mejor Precio</h1>
+            <p>Descubre nuestra selección única de las equipaciones más icónicas del Real Madrid, FC Barcelona, AC Milan e Inter de Milán. Calidad verificada y gestión de compra ultrasegura en Vinted.</p>
+            
+            <div class="hero-price-banner">
+                <span>Precio único por camiseta: <strong>25,00€</strong></span>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="#catalogo" class="btn-primary">
+                    <i class="fa-solid fa-shirt"></i> Ver las 5 Camisetas
+                </a>
+                <a href="https://www.vinted.es/member/3181094157" target="_blank" class="btn-vinted-hero">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Comprar directo en Vinted
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges Bar -->
+    <section class="trust-bar">
+        <div class="trust-container">
+            <div class="trust-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h4>Pago Protegido</h4>
+                <p>Tu dinero a salvo con la pasarela oficial de Vinted.</p>
+            </div>
+            <div class="trust-item">
+                <i class="fa-solid fa-box-open"></i>
+                <h4>Envío en 24-48h</h4>
+                <p>Preparación inmediata y código de seguimiento.</p>
+            </div>
+            <div class="trust-item">
+                <i class="fa-solid fa-check-double"></i>
+                <h4>Estado Verificado</h4>
+                <p>Revisión detallada de costuras, escudos y tejido.</p>
+            </div>
+            <div class="trust-item">
+                <i class="fa-solid fa-comments"></i>
+                <h4>Atención Personalizada</h4>
+                <p>Respuesta rápida a todas tus dudas por chat.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section class="catalog-section" id="catalogo">
+        <div class="section-header">
+            <h2>Catálogo en Stock</h2>
+            <p>Haz clic en cualquier producto para abrirlo o ir a nuestra tienda de Vinted para finalizar tu compra de forma segura.</p>
+        </div>
+
+        <div class="product-grid">
+
+            <!-- Real Madrid Local -->
+            <div class="product-card">
+                <span class="badge-tag">Excelente Estado</span>
+                <span class="price-badge">25€</span>
+                <div class="product-image-container">
+                    <!-- PARA PONER TU FOTO REAL: quita la linea del placeholder y pon la siguiente descomentada: -->
+                    <!-- <img src="URL_DE_TU_FOTO_AQUI.jpg" alt="Real Madrid Local" class="product-img"> -->
+                    <div class="placeholder-icon">⚪</div>
+                </div>
+                <div class="product-details">
+                    <span class="club-name">Real Madrid C.F.</span>
+                    <h3 class="product-title">Real Madrid - Equipación Local</h3>
+                    <p class="product-description">Icónica camiseta blanca del conjunto madridista. Tejido técnico de alta resistencia, tecnología transpirable y escudo bordado en perfecto estado.</p>
+                    <div class="specs-grid">
+                        <div class="spec-item"><span class="label">Estado</span><span class="val">9.5 / 10</span></div>
+                        <div class="spec-item"><span class="label">Color</span><span class="val">Blanco Oficial</span></div>
+                        <div class="spec-item"><span class="label">Envío</span><span class="val">Inmediato</span></div>
+                        <div class="spec-item"><span class="label">Precio</span><span class="val">25,00 €</span></div>
+                    </div>
+                    <a href="https://www.vinted.es/member/3181094157" target="_blank" class="vinted-buy-btn">
+                        <i class="fa-solid fa-bag-shopping"></i> Comprar en Vinted
+                    </a>
+                </div>
+            </div>
+
+            <!-- Real Madrid Visitante -->
+            <div class="product-card">
+                <span class="badge-tag">Edición Especial</span>
+                <span class="price-badge">25€</span>
+                <div class="product-image-container">
+                    <!-- <img src="URL_DE_TU_FOTO_AQUI.jpg" alt="Real Madrid Visitante" class="product-img"> -->
+                    <div class="placeholder-icon">🟣</div>
+                </div>
+                <div class="product-details">
+                    <span class="club-name">Real Madrid C.F.</span>
+                    <h3 class="product-title">Real Madrid - Equipación Visitante</h3>
+                    <p class="product-description">Segunda equipación de edición especial. Diseño moderno en tono morado/oscuro, ideal tanto para entrenar como para coleccionar.</p>
+                    <div class="specs-grid">
+                        <div class="spec-item"><span class="label">Estado</span><span class="val">10 / 10 (Impecable)</span></div>
+                        <div class="spec-item"><span class="label">Color</span><span class="val">Morado / Alt.</span></div>
+                        <div class="spec-item"><span class="label">Envío</span><span class="val">Inmediato</span></div>
+                        <div class="spec-item"><span class="label">Precio</span><span class="val">25,00 €</span></div>
+                    </div>
+                    <a href="https://www.vinted.es/member/3181094157" target="_blank" class="vinted-buy-btn">
+                        <i class="fa-solid fa-bag-shopping"></i> Comprar en Vinted
+                    </a>
+                </div>
+            </div>
+
+            <!-- FC Barcelona -->
+            <div class="product-card">
+                <span class="badge-tag">Clásico Colección</span>
+                <span class="price-badge">25€</span>
+                <div class="product-image-container">
+                    <!-- <img src="URL_DE_TU_FOTO_AQUI.jpg" alt="FC Barcelona" class="product-img"> -->
+                    <div class="placeholder-icon">🔵🔴</div>
+                </div>
+                <div class="product-details">
+                    <span class="club-name">F.C. Barcelona</span>
+                    <h3 class="product-title">FC Barcelona - Equipación Oficial</h3>
+                    <p class="product-description">La mítica franja azulgrana del Barça. Diseño con acabados de calidad superior, gran suavidad al tacto y escudos oficiales minuciosamente conservados.</p>
+                    <div class="specs-grid">
+                        <div class="spec-item"><span class="label">Estado</span><span class="val">9 / 10</span></div>
+                        <div class="spec-item"><span class="label">Color</span><span class="val">Azulgrana</span></div>
+                        <div class="spec-item"><span class="label">Envío</span><span class="val">Inmediato</span></div>
+                        <div class="spec-item"><span class="label">Precio</span><span class="val">25,00 €</span></div>
+                    </div>
+                    <a href="https://www.vinted.es/member/3181094157" target="_blank" class="vinted-buy-btn">
+                        <i class="fa-solid fa-bag-shopping"></i> Comprar en Vinted
+                    </a>
+                </div>
+            </div>
+
+            <!-- AC Milan -->
+            <div class="product-card">
+                <span class="badge-tag">Top Ventas</span>
+                <span class="price-badge">25€</span>
+                <div class="product-image-container">
+                    <!-- <img src="URL_DE_TU_FOTO_AQUI.jpg" alt="AC Milan" class="product-img"> -->
+                    <div class="placeholder-icon">🔴⚫</div>
+                </div>
+                <div class="product-details">
+                    <span class="club-name">A.C. Milan</span>
+                    <h3 class="product-title">AC Milan - Rossoneri Style</h3>
+                    <p class="product-description">Clásico diseño rossonero del AC Milan. Un modelo con una historia inigualable en el fútbol europeo. Excelente estética y comodidad garantizada.</p>
+                    <div class="specs-grid">
+                        <div class="spec-item"><span class="label">Estado</span><span class="val">9.5 / 10</span></div>
+                        <div class="spec-item"><span class="label">Color</span><span class="val">Rojo / Negro</span></div>
+                        <div class="spec-item"><span class="label">Envío</span><span class="val">Inmediato</span></div>
+                        <div class="spec-item"><span class="label">Precio</span><span class="val">25,00 €</span></div>
+                    </div>
+                    <a href="https://www.vinted.es/member/3181094157" target="_blank" class="vinted-buy-btn">
+                        <i class="fa-solid fa-bag-shopping"></i> Comprar en Vinted
+                    </a>
+                </div>
+            </div>
+
+            <!-- Inter de Milán -->
+            <div class="product-card">
+                <span class="badge-tag">Edición Italiana</span>
+                <span class="price-badge">25€</span>
+                <div class="product-image-container">
+                    <!-- <img src="URL_DE_TU_FOTO_AQUI.jpg" alt="Inter de Milan" class="product-img"> -->
+                    <div class="placeholder-icon">🔵⚫</div>
+                </div>
+                <div class="product-details">
+                    <span class="club-name">Inter de Milán</span>
+                    <h3 class="product-title">Inter de Milán - Nerazzurri</h3>
+                    <p class="product-description">Camiseta nerazzurra del Inter de Milán. Un contraste elegante entre azul y negro con parches y bordados en perfecto estado de conservación.</p>
+                    <div class="specs-grid">
+                        <div class="spec-item"><span class="label">Estado</span><span class="val">10 / 10 (Impecable)</span></div>
+                        <div class="spec-item"><span class="label">Color</span><span class="val">Azul / Negro</span></div>
+                        <div class="spec-item"><span class="label">Envío</span><span class="val">Inmediato</span></div>
+                        <div class="spec-item"><span class="label">Precio</span><span class="val">25,00 €</span></div>
+                    </div>
+                    <a href="https://www.vinted.es/member/3181094157" target="_blank" class="vinted-buy-btn">
+                        <i class="fa-solid fa-bag-shopping"></i> Comprar en Vinted
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Why Buy From Us Section -->
+    <section class="why-us" id="ventajas">
+        <div class="section-header">
+            <h2>¿Por qué comprar en FootballShopping ESP?</h2>
+            <p>Nos encargamos de que cada apasionado del fútbol reciba un producto cuidado y un servicio impecable.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-euro-sign"></i></div>
+                <h3>Precio Único e Insuperable</h3>
+                <p>Mantenemos una tarifa plana de solo <strong>25€</strong> por camiseta para que consigas equipaciones de primer nivel sin pagar sobreprecios.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <h3>Inspección al Detalle</h3>
+                <p>Revisamos cada prenda minuciosamente (escudos, costuras, parches y estado del tejido) para darte una valoración exacta antes de comprar.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-shield-cat"></i></div>
+                <h3>Garantía y Seguridad Vinted</h3>
+                <p>Comprar a través de nuestra tienda en Vinted te protege legalmente: si hay algún problema, la plataforma te devuelve el 100% de tu dinero.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-paper-plane"></i></div>
+                <h3>Envíos Rápidos a Toda España</h3>
+                <p>Despachamos los paquetes en menos de 24 horas hábiles hacia tu punto de recogida favorito (InPost, Correos, Boyacá, etc.).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Steps -->
+    <section class="how-it-works" id="como-comprar">
+        <div class="section-header">
+            <h2>Paso a Paso: Cómo Realizar tu Compra</h2>
+            <p>Comprar es rápido, fácil y transparente en solo 4 sencillos pasos.</p>
+        </div>
+
+        <div class="steps-container">
+            <div class="step-box">
+                <div class="step-number">01</div>
+                <h3>Selecciona la Camiseta</h3>
+                <p>Explora las fotos y especificaciones en esta web y pulsa en "Comprar en Vinted".</p>
+            </div>
+            <div class="step-box">
+                <div class="step-number">02</div>
+                <h3>Accede a nuestro Perfil</h3>
+                <p>Ir a nuestro perfil oficial donde podrás ver el anuncio específico y hablar directamente con nosotros.</p>
+            </div>
+            <div class="step-box">
+                <div class="step-number">03</div>
+                <h3>Haz tu Pedido en Vinted</h3>
+                <p>Paga de forma segura. Vinted retiene el dinero en custodia hasta que recibas el paquete en tus manos.</p>
+            </div>
+            <div class="step-box">
+                <div class="step-number">04</div>
+                <h3>Recibe y Disfruta</h3>
+                <p>Recibe tu camiseta en pocos días, comprueba su calidad y prepárate para lucirla.</p>
+            </div>
+        </div>
+
+        <!-- Guarantee Banner -->
+        <div class="guarantee-box">
+            <div class="guarantee-icon">
+                <i class="fa-solid fa-shield-heart"></i>
+            </div>
+            <div class="guarantee-text">
+                <h3>Tu Satisfacción está 100% Asegurada</h3>
+                <p>Al utilizar la plataforma <strong>Vinted</strong> para las transacciones, cuentas con cobertura completa ante extravíos o desvíos en el envío. ¡Compra con total tranquilidad y transparencia!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="section-header">
+            <h2>Preguntas Frecuentes</h2>
+            <p>Resolvemos todas tus dudas antes de realizar tu pedido.</p>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3><i class="fa-solid fa-circle-question"></i> ¿Cómo sé cuál es la talla exacta de cada camiseta?</h3>
+                <p>En nuestro perfil de Vinted añadimos las medidas exactas (largo y ancho de axila a axila) de cada prenda en la descripción. También puedes pedirnos fotos con cinta métrica por el chat.</p>
+            </div>
+            <div class="faq-item">
+                <h3><i class="fa-solid fa-circle-question"></i> ¿Por qué la compra se realiza en Vinted?</h3>
+                <p>Utilizamos Vinted porque ofrece las mejores tarifas de envío económico y proporciona la máxima protección y garantía de devolución tanto para el comprador como para el vendedor.</p>
+            </div>
+            <div class="faq-item">
+                <h3><i class="fa-solid fa-circle-question"></i> ¿Cuánto tarda en llegar mi pedido?</h3>
+                <p>Normalmente entregamos los paquetes en la empresa de transporte en menos de 24 horas. El envío tarda habitualmente entre 2 y 4 días laborables en llegar a tu punto de recogida.</p>
+            </div>
+            <div class="faq-item">
+                <h3><i class="fa-solid fa-circle-question"></i> ¿Puedo pedir fotos adicionales o detalles del producto?</h3>
+                <p>¡Por supuesto! Escríbenos directamente por el chat de Vinted y te enviaremos al momento fotos extra de las etiquetas, bordados o cualquier zona que quieras revisar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>FootballShopping ESP</h4>
+                <p>Tu tienda especializada en camisetas de fútbol seleccionadas de los clubes más legendarios del mundo. Calidad, rapidez y trato cercano.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="#catalogo">Catálogo de Productos</a></li>
+                    <li><a href="#ventajas">Ventajas de Compra</a></li>
+                    <li><a href="#como-comprar">Guía Paso a Paso</a></li>
+                    <li><a href="#faq">Preguntas Frecuentes</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Tienda Oficial Vinted</h4>
+                <p>Todas las transacciones y envíos son procesados de forma segura mediante nuestro perfil oficial de Vinted.</p>
+                <br>
+                <a href="https://www.vinted.es/member/3181094157" target="_blank" class="vinted-badge-btn" style="display: inline-flex;">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir Mi Perfil en Vinted
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; FootballShopping ESP. Todos los derechos reservados. Redirigiendo a las ofertas oficiales en Vinted.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
